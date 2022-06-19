@@ -41,6 +41,19 @@ app.post("/api/shorturl", async (req, res) => {
   res.sendStatus(200);
 });
 
+app.get("/api/:shorturl", async (req, res) => {
+  const shortUrl = await ShortUrl.findOne({ short: req.params.shorturl });
+
+  if (shortUrl === null) {
+    return res.sendStatus(404);
+  }
+
+  shortUrl.clicks++;
+  shortUrl.save();
+
+  res.redirect(shortUrl.full);
+});
+
 app.get("/:shorturl", async (req, res) => {
   const shortUrl = await ShortUrl.findOne({ short: req.params.shorturl });
 
