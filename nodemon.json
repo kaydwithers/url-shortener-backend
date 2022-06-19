@@ -1,7 +1,0 @@
-{
-  "env": {
-    "DB_PASSWORD": "pw123",
-    "DB_USER": "kayd",
-    "PORT": "5000"
-  }
-}
