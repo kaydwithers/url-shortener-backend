@@ -75,4 +75,4 @@ app.delete("/api/shorturls/:shorturl", async (req, res) => {
   res.sendStatus(200);
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 5000);
