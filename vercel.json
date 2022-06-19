@@ -1,6 +1,6 @@
 {
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api" },
-    { "source": "/shortener/:shorturl", "destination": "/api/:shorturl" }
+    { "source": "/shortener/:shorturl", "destination": "https://google.com" }
   ]
 }
