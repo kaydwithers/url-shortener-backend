@@ -1,0 +1,15 @@
+{
+  "name": "url-shortener-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon server.js",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
