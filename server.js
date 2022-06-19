@@ -33,8 +33,6 @@ app.get("/api/urls", async (req, res) => {
 });
 
 app.post("/api/shorturl", async (req, res) => {
-  console.log("crypto: ", crypto.randomUUID().substring(0, 6));
-
   await ShortUrl.create({
     full: req.body.longUrl,
     short: crypto.randomUUID().substring(0, 6),
