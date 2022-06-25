@@ -41,20 +41,6 @@ app.post("/api/shorturl", async (req, res) => {
   res.sendStatus(200);
 });
 
-// Vercel only listener as root paths need to be wrapped in redirects and rewrites.
-app.get("/api/:shorturl", async (req, res) => {
-  const shortUrl = await ShortUrl.findOne({ short: req.params.shorturl });
-
-  if (shortUrl === null) {
-    return res.sendStatus(404);
-  }
-
-  shortUrl.clicks += 1;
-  shortUrl.save();
-
-  res.redirect(shortUrl.full);
-});
-
 app.get("/:shorturl", async (req, res) => {
   const shortUrl = await ShortUrl.findOne({ short: req.params.shorturl });
 

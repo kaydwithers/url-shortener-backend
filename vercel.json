@@ -1,6 +1,4 @@
 {
   "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }],
-  "redirects": [
-    { "source": "/shortener/:shorturl", "destination": "/api/:shorturl" }
-  ]
+  "redirects": [{ "source": "/:shorturl", "destination": "/api/:shorturl" }]
 }
