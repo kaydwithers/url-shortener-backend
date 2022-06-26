@@ -1,7 +1,7 @@
 const crypto = require("crypto");
 const express = require("express");
 const mongoose = require("mongoose");
-const ShortUrl = require("../models/short-url.ts");
+const ShortUrl = require("../models/short-url");
 
 const app = express();
 
